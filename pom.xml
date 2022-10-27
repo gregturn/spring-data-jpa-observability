@@ -15,6 +15,7 @@
     <description>spring-data-jpa-observability</description>
     <properties>
         <java.version>17</java.version>
+        <datasourceMicrometerSpringBootVersion>1.0.0-SNAPSHOT</datasourceMicrometerSpringBootVersion>
     </properties>
     <dependencies>
         <dependency>
@@ -28,6 +29,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>net.ttddyy.observation</groupId>
+            <artifactId>datasource-micrometer-spring-boot</artifactId>
+            <version>${datasourceMicrometerSpringBootVersion}</version>
         </dependency>
 
         <dependency>
@@ -86,6 +93,14 @@
             <releases>
                 <enabled>false</enabled>
             </releases>
+        </repository>
+        <repository>
+            <id>sonatype-snapshots</id>
+            <name>Sonatype Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
     <pluginRepositories>
